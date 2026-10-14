@@ -26,3 +26,20 @@ enquiryForm?.addEventListener("submit", (event) => {
   const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=aarvixglobalsolutions@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   window.open(gmailUrl, "_blank", "noopener,noreferrer");
 });
+
+const emailAction = document.querySelector("[data-mobile-href]");
+const desktopEmailHref = emailAction?.getAttribute("href");
+const mobileEmailHref = emailAction?.getAttribute("data-mobile-href");
+
+const updateEmailAction = () => {
+  if (!emailAction || !desktopEmailHref || !mobileEmailHref) return;
+  emailAction.setAttribute(
+    "href",
+    window.matchMedia("(max-width: 600px)").matches
+      ? mobileEmailHref
+      : desktopEmailHref,
+  );
+};
+
+updateEmailAction();
+window.addEventListener("resize", updateEmailAction);
