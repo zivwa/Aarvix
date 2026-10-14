@@ -16,3 +16,13 @@ footer{grid-template-columns:1.15fr .85fr 1fr 1.35fr;gap:18px;padding-top:32px;p
 @media(max-width:800px){.page-hero{padding:80px 7vw 70px}.about-content,.contact-page-grid,.career-callout{grid-template-columns:1fr;gap:25px}.about-content>div:last-child{padding-top:0}.value-grid{grid-template-columns:1fr;margin-top:35px}.standalone-services{padding-top:60px}.career-callout{gap:45px}}
 @media(max-width:600px){.direct-contact{padding:62px 7vw;grid-template-columns:1fr;gap:55px}.enquiry-form-wrap h2,.direct-lines h2{margin:28px 0 30px}.enquiry-form-wrap input,.enquiry-form-wrap textarea{margin-bottom:22px}.enquiry-form-wrap .button{width:100%;justify-content:space-between}.direct-lines>p{font-size:16px}.direct-phone{font-size:21px}.whatsapp-button{width:100%;justify-content:space-between}.contact-location{margin-top:35px}}
 
+.contact-actions .button{min-width:220px;padding:14px 16px;gap:12px;justify-content:flex-start}
+.contact-action-icon{width:34px;height:34px;display:grid;place-items:center;flex:0 0 34px;border:1px solid currentColor;border-radius:50%}
+.contact-action-icon svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.7}
+.contact-action-copy{display:flex;flex:1;flex-direction:column;gap:3px;align-items:flex-start}
+.contact-action-copy strong{font:700 12px "DM Sans"}
+.contact-action-copy small{font-size:10px;font-weight:500;opacity:.72}
+.contact-action-arrow{font-size:18px;line-height:1}
+.contact-actions .button-light:hover .contact-action-icon{background:var(--navy);color:#fff}
+.contact-actions .button-call:hover .contact-action-icon{background:var(--orange);color:#fff}
+@media(max-width:600px){.contact-actions .button{width:100%;min-width:0}}
